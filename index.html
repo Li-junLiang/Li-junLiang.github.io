@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>海豚小说网-登录</title>
+    <link rel="icon" href="./img/dolphin.png">
+</head>
+<body>
+     <!-- 登录表单 -->
+    <div class="box">
+        <img class="logo" alt="dribble-logo" src="./img/dolphin.png" />
+        <p class="signin">Sign in</p>
+        <p class="signin-text">第三方登录<br/> Google 或:</p>
+        <div class="signin-row">
+          <i class="ic1 fab fa-twitter"><img src="./img/qq.png" alt=""></i>
+          <i class="ic2 fab fa-facebook"><img src="./img/weixin.png" alt=""></i>
+          <i class="ic3 fab fa-google"><img src="./img/steam.png" alt=""></i>
+        </div>
+        <input name="user" id="user" type="text" placeholder="用户名">
+        <br/>
+        <input name="pass" id="password" type="password" placeholder="密码" required>
+        <button id="btn">登录</button>
+        <p class="foot-txt">忘记密码？</p>
+        <p class="foot-txt">Not a memeber? <span class="bold">Sign up now</p>
+      </div>
+</body>
+<script>
+    window.addEventListener('load',()=>{
+        document.querySelector('.box').style.visibility='visible'
+        document.querySelector('.box').style.transform='translateX(0)'
+    })
+    document.querySelector('#btn').addEventListener('click',()=>{ 
+        var user=document.querySelector('#user').value
+        var password=document.querySelector('#password').value
+        if(user!=''&&password!=''){
+            setTimeout(()=>{
+                location.href='./index/首页.html'
+            },1000)
+        }else{
+            alert('请填写完整信息')
+        }              
+    })
+</script>
+</html>

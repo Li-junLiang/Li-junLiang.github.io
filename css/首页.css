@@ -1,0 +1,513 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid; */
+    box-sizing: border-box;
+
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#header {
+    display: flex;
+    height: 67px;
+    background-color: rgb(229, 250, 255);
+    border-bottom: 1px solid rgb(183, 181, 181);
+    overflow: hidden;
+}
+
+.Logo {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+
+.box {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+ul {
+    display: flex;
+    text-align: center;
+    margin-left: 40px;
+    line-height: 67px;
+    font-size: 13px;
+}
+
+.box-th ul li {
+    width: 100px;
+    height: 67px;
+    cursor: pointer
+}
+
+/* 伪类 */
+.box-th ul li:hover {
+    color: orange;
+}
+
+.current {
+    position: relative;
+    color: black;
+    font-weight: bold;
+}
+/* 伪元素 */
+.current::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    border-radius: 10px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: aqua;
+}
+/* 伪类 */
+.box-tb .item:nth-child(n+2) {
+    display: none;
+}
+
+.box-tb {
+    width: 100%;
+}
+
+input {
+    width: 230px;
+    text-indent: 20px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+}
+/* 伪类 */
+input:focus,
+button:focus {
+    outline: none;
+}
+
+.input-login span {
+    position: relative;
+    cursor: pointer
+}
+
+/* css3图标 */
+.input-login span:nth-child(1)::after {
+    content: '' url(../img/search.png);
+    vertical-align: middle;
+    position: absolute;
+    right: 11px;
+}
+
+.input-login {
+    flex: 2.1;
+    display: flex;
+
+    /* flex-direction: column; */
+    align-items: center;
+}
+
+.input-login span:nth-child(2) a {
+    margin-left: 10px;
+}
+
+.sCore button {
+    background-color: transparent;
+    border: none;
+}
+
+.carousel-inner img {
+    height: 340px !important;
+}
+
+.carousel-indicators {
+    position: absolute;
+    top: 250px;
+}
+
+.carousel-indicators li {
+    background-color: tomato;
+}
+
+.con_item1 {
+    width: 75%;
+    height: 250px;
+    display: flex;
+    margin: auto;
+    transform: translateY(-50px);
+}
+
+.con_item1-1 {
+    flex: 2;
+    display: flex;
+
+
+}
+
+.con_item1-1 span:nth-child(1) {
+    flex: 1;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: linear-gradient(0deg, #fbf6ea, #fbf6ea),
+        linear-gradient(218.14deg, #d0d0d0 26.12%, hsla(0, 0%, 92%, 0) 73.79%);
+    ;
+}
+
+.con_item1-1 span:nth-child(2) {
+    flex: 1;
+    /* border: 1px solid; */
+    /* border-radius: 20px; */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: linear-gradient(0deg, #eaf5f4, #eaf5f4), linear-gradient(218.06deg, #d0d0d0 26.03%, hsla(0, 0%, 92%, 0) 73.76%);
+    ;
+}
+
+.con_item1-1 span img {
+    width: 100%;
+    height: 100%;
+    /* border-left: 20px; */
+
+}
+
+.con_item1-2 {
+    flex: 1;
+    background-color: white;
+    margin-left: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    overflow: hidden;
+
+}
+
+.con_item1-2>span {
+    flex: 1;
+    /* margin-top: 5px; */
+
+    font-size: 15px;
+    /* border: 1px solid; */
+    /* margin: auto; */
+    cursor: pointer
+}
+
+.con_item1-2>span:not(:nth-child(1)):hover {
+    color: orange;
+}
+
+.fixed-top {
+    display: none;
+}
+/* 媒体查询 web 响应式 */
+@media (max-width: 500px) {
+
+    body,
+    * {
+        font-size: 10px;
+    }
+     .recommend-left-item{
+        display: none  !important;
+
+    }
+
+}
+
+@media (max-width: 800px) {
+    .fixed-top {
+        display: block;
+
+    }
+    .left-content .span1{
+        width: 110% !important;
+    }
+
+    #header {
+        display: none;
+    }
+
+    .carousel-inner img {
+        margin-top: 50px;
+        height: 200px !important;
+    }
+
+    .carousel-indicators {
+        position: absolute;
+        top: 180px;
+    }
+    .con_item1{
+        /* width: 70%; */
+        height: 150px;
+        /* font-size: 30px; */
+    }
+    .con_item1-2{
+        display: none;
+    }
+    .recommend-right-item>div span img {
+        width: 150px !important;
+        height: 150px !important;
+    }
+
+    .right-content {
+        display: none !important;
+    }
+
+
+
+
+
+}
+
+@media (max-width: 1280px) {
+    .newUser {
+        /* margin-top: 500px !important; */
+    }
+    .recommend-left-item{
+        display: none;
+    }
+}
+
+.navbar {
+    background-color: rgb(139, 182, 193) !important;
+
+}
+
+.bg-dark {
+    background-color: rgb(139, 182, 193) !important;
+}
+
+.recommend {
+    width: 75%;
+    height: 520px;
+    margin: auto;
+    /* background-color: pink; */
+}
+
+.recommend {
+    display: flex;
+}
+
+p {
+    font-size: 10px !important;
+}
+
+.left-content {
+    display: flex;
+    flex: 3.5;
+    margin-right: 50px;
+    /* background-color: skyblue; */
+    flex-direction: column;
+}
+
+.right-content {
+    flex: 1;
+    display: flex;
+    /* background-color: yellow; */
+    flex-direction: column;
+
+}
+
+.right-content div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-content div>span {
+    flex: 1;
+    margin: 3px;
+    /* background-color: aquamarine; */
+    line-height: 50px;
+}
+
+.content-item {
+    flex: 1;
+    display: flex;
+    margin-top: 10px;
+    overflow: auto;
+    /* background-color: aquamarine; */
+}
+.content-item::-webkit-scrollbar {
+    display: none;
+  }
+.recommend-left-item {
+    position: sticky;
+    top: 10px;
+    /* flex: 1; */
+    height: 100px;
+    width: 150px;
+    /* background-color: violet; */
+    display: flex;
+    flex-direction: column;
+
+}
+
+.recommend-right-item {
+
+    flex: 1;
+    /* background-color: tomato; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* justify-content: flex-end; */
+
+}
+
+.recommend-right-item>span {
+    width: 250px;
+    height: 150px;
+    /* background-color: slateblue; */
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.recommend-right-item span span {
+    flex: 1;
+    /* border: 1px solid; */
+}
+
+.recommend-right-item span span:nth-child(2) {
+    margin-left: 10px;
+}
+
+.recommend-right-item span span img {
+    transition: .5s;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.recommend-right-item span span img:hover {
+    transform: scale(1.1);
+}
+
+.recommend-left-item>span:nth-child(1) {
+    flex: 3;
+}
+
+.recommend-left-item>span:nth-child(2) {
+    flex: 2.5;
+    background-color: #EEE;
+
+}
+
+.newUser {
+    transform: translateY(120px);
+    width: 75%;
+    height: 300px;
+    margin: auto;
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: column;
+  
+
+}
+
+.newUser>div:nth-child(1) {
+    font-size: 18px;
+    color: rgb(51, 47, 47);
+    flex: 0.8;
+    /* border: 1px solid; */
+
+}
+
+.newUser>div:nth-child(2) {
+    flex: 3;
+    /* width: 100%; */
+    /* border: 1px solid; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.newUser>div:nth-child(2)>span {
+    /* flex: 1; */
+    width: 500px;
+    /* border: 1px solid; */
+    margin:20px 10px;
+    position: relative;
+    border-radius: 10px;
+    /* top: 10%; */
+    height: 150px;
+    /* line-height: 150px; */
+    transition: all .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newUser>div:nth-child(2)>span:hover {
+    transform: translateY(-10px);
+}
+
+.newUser>div:nth-child(2) img {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+.foot {
+    margin-top: 100px;
+    height: 200px;
+    display: flex;
+}
+
+.foot div:nth-child(2) {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    background-color: skyblue;
+    align-items: center;
+    justify-content: center;
+}
+
+.foot div:nth-child(1) {
+    flex: 1;
+    background-color: skyblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#one {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(198, 195, 195);
+}
+
+/* 动画 */
+.box-th ul li a:hover {
+    color: orange;
+}
